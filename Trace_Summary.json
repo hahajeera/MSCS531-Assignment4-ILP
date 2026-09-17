@@ -1,0 +1,116 @@
+{
+  "retired_microops": 36142,
+  "mean_fetch_to_retire_cycles": 83.48873886337225,
+  "first_microops": [
+    {
+      "fetch": 56500,
+      "seq": "1",
+      "text": "  HINT_NOP : fault   NoFault",
+      "decode": 57000,
+      "rename": 57500,
+      "dispatch": 58500,
+      "issue": 58500,
+      "complete": 59000,
+      "retire": 60000
+    },
+    {
+      "fetch": 57000,
+      "seq": "2",
+      "text": "  XOR_R_R : xor   ebp, ebp, ebp",
+      "decode": 57500,
+      "rename": 58000,
+      "dispatch": 59000,
+      "issue": 59000,
+      "complete": 59500,
+      "retire": 60500
+    },
+    {
+      "fetch": 57500,
+      "seq": "3",
+      "text": "  MOV_R_R : mov   r9, r9, rdx",
+      "decode": 58000,
+      "rename": 58500,
+      "dispatch": 59500,
+      "issue": 59500,
+      "complete": 60000,
+      "retire": 61000
+    },
+    {
+      "fetch": 58500,
+      "seq": "5",
+      "text": "  POP_R : addi   rsp, rsp, 0x8",
+      "decode": 59000,
+      "rename": 59500,
+      "dispatch": 60500,
+      "issue": 60500,
+      "complete": 61000,
+      "retire": 118000
+    },
+    {
+      "fetch": 59500,
+      "seq": "7",
+      "text": "  MOV_R_R : mov   rdx, rdx, rsp",
+      "decode": 60000,
+      "rename": 60500,
+      "dispatch": 61500,
+      "issue": 61500,
+      "complete": 62000,
+      "retire": 119000
+    },
+    {
+      "fetch": 60000,
+      "seq": "8",
+      "text": "  AND_R_I : limm   t1, 0xfffffffffffffff0",
+      "decode": 60500,
+      "rename": 61000,
+      "dispatch": 62000,
+      "issue": 62000,
+      "complete": 62500,
+      "retire": 119500
+    },
+    {
+      "fetch": 60500,
+      "seq": "9",
+      "text": "  AND_R_I : and   rsp, rsp, t1",
+      "decode": 61000,
+      "rename": 61500,
+      "dispatch": 62500,
+      "issue": 62500,
+      "complete": 63000,
+      "retire": 120000
+    },
+    {
+      "fetch": 61500,
+      "seq": "11",
+      "text": "  PUSH_R : subi   rsp, rsp, 0x8",
+      "decode": 62000,
+      "rename": 62500,
+      "dispatch": 63500,
+      "issue": 63500,
+      "complete": 64000,
+      "retire": 121000
+    },
+    {
+      "fetch": 61000,
+      "seq": "10",
+      "text": "  PUSH_R : st   rax, SS:[t0 + rsp + 0xfffffffffffffff8]",
+      "decode": 61500,
+      "rename": 62000,
+      "dispatch": 63000,
+      "issue": 63000,
+      "complete": 63500,
+      "retire": 120500
+    },
+    {
+      "fetch": 62500,
+      "seq": "13",
+      "text": "  PUSH_R : subi   rsp, rsp, 0x8",
+      "decode": 63000,
+      "rename": 63500,
+      "dispatch": 64500,
+      "issue": 64500,
+      "complete": 65000,
+      "retire": 122000
+    }
+  ]
+}
