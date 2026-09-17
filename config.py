@@ -6,7 +6,7 @@ p=argparse.ArgumentParser()
 p.add_argument('--binary',required=True)
 p.add_argument('--mode',default='integer')
 p.add_argument('--width',type=int,default=1)
-p.add_argument('--predictor',choices=['local','tournament'],default='local')
+p.add_argument('--predictor',choices=['local','tournament','none'],default='local')
 p.add_argument('--threads',type=int,default=1)
 a=p.parse_args()
 s=System()
@@ -16,7 +16,8 @@ s.mem_mode='timing'; s.mem_ranges=[AddrRange('512MB')]
 s.cpu=X86O3CPU(numThreads=a.threads)
 for field in ['fetchWidth','decodeWidth','renameWidth','dispatchWidth','issueWidth','wbWidth','commitWidth']:
     setattr(s.cpu,field,a.width)
-s.cpu.branchPred=BranchPredictor(conditionalBranchPred=LocalBP() if a.predictor=='local' else TournamentBP())
+direction=LocalBP() if a.predictor=='local' else (TournamentBP() if a.predictor=='tournament' else NoDirectionPrediction())
+s.cpu.branchPred=BranchPredictor(conditionalBranchPred=direction)
 s.cpu.numROBEntries=128
 s.cpu.forwardComSize=64; s.cpu.backComSize=64
 s.membus=SystemXBar()

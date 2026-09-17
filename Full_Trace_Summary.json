@@ -1,0 +1,8 @@
+{
+  "retired_microops": 2673083,
+  "microop_mean_fetch_to_retire_cycles": 33.67396298581077,
+  "architectural_groups": 999074,
+  "all_groups": 999545,
+  "mean_group_fetch_to_last_retire_cycles": 39.63858232723502,
+  "method": "Group by PC and (sequence number minus micro-PC); require contiguous micro-PCs from zero; compare group count with simInsts before treating groups as complete architectural instructions."
+}
