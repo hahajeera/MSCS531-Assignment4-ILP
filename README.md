@@ -20,7 +20,7 @@ Then use --predictor none. This returns fall-through for conditional direction d
 
 Trace example:
 
-    /path/to/gem5.opt -d results/trace --debug-flags=O3PipeView --debug-end=50000000 --debug-file=trace.out config.py --binary "$PWD/benchmark" --mode integer --width 1
+    /path/to/gem5.opt -d results/trace --debug-flags=O3PipeView --debug-end=5000000 --debug-file=trace.out config.py --binary "$PWD/benchmark" --mode integer --width 1
     python3 /path/to/gem5/util/o3-pipeview.py -c 500 -o results/trace/pipeview.out results/trace/trace.out
 
 At 2 GHz one cycle is 500 simulator ticks. IPC is architectural committed instructions/cycles. Fetch-to-retirement latency from O3PipeView concerns micro-operations, not necessarily whole x86 instructions. The bounded trace covers startup, not the complete kernel.

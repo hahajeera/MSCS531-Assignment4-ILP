@@ -1,6 +1,6 @@
 {
-  "retired_microops": 36142,
-  "mean_fetch_to_retire_cycles": 83.48873886337225,
+  "retired_microops": 2277,
+  "mean_fetch_to_retire_cycles": 30.46596398770312,
   "first_microops": [
     {
       "fetch": 56500,
