@@ -27,4 +27,4 @@ At 2 GHz one cycle is 500 simulator ticks. IPC is architectural committed instru
 
 Full trace: omit --debug-end and use --debug-file=trace.out.gz. The complete local trace is about 80 MB compressed and is not committed to GitHub; raw configs/stats, a bounded visualizer trace, and full-run summary are included. Reproduce the full trace using the supplied workload/configuration before rerunning the latency parser.
 
-Limitations: width changes the entire frontend/backend width bundle; libc startup and command dispatch are included; no calibrated power model is implemented. The O3 pipeline has more than five internal stages; its five functional roles are mapped explicitly in the report. Repository: https://github.com/hahajeera/MSCS531-Assignment4-ILP (private; instructor access must be arranged before grading).
+Limitations: width changes the entire frontend/backend width bundle; libc startup and command dispatch are included; no calibrated power model is implemented. The O3 pipeline has more than five internal stages; its five functional roles are mapped explicitly in the report. Repository: https://github.com/hahajeera/MSCS531-Assignment4-ILP (public).
